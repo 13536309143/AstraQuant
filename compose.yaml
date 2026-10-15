@@ -1,0 +1,15 @@
+services:
+  astraquant:
+    build: .
+    image: astraquant:local
+    ports:
+      - "127.0.0.1:8787:8787"
+    env_file: .env
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8787
+    volumes:
+      - astraquant-data:/app/data
+    restart: unless-stopped
+volumes:
+  astraquant-data:

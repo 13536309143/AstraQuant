@@ -1,0 +1,826 @@
+{
+  "generatedAt": "2026-10-15T02:42:03.708Z",
+  "config": {
+    "provider": "minimax",
+    "model": "MiniMax-M3",
+    "baseUrl": "https://api.minimax.cn/v1",
+    "protocol": "chat",
+    "configured": true,
+    "concurrency": 2
+  },
+  "scope": "Three synthetic cases; single run per architecture. Measures controlled arithmetic/missing-value checks, not investment returns or statistical superiority. Committee uses six roles, skeptic, final synthesis. Same provider/model unless role environment overrides exist.",
+  "results": [
+    {
+      "fixture": "industrial-cash-gap",
+      "architecture": "single",
+      "latencyMs": 6661.1499,
+      "calls": [
+        {
+          "role": "single",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 6660.8775,
+          "usage": {
+            "prompt_tokens": 427,
+            "completion_tokens": 71,
+            "total_tokens": 498
+          }
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 427,
+        "completion_tokens": 71,
+        "total_tokens": 498
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "key": "revenueGrowth",
+            "pass": true
+          },
+          {
+            "key": "cashProfitRatio",
+            "pass": true
+          },
+          {
+            "key": "revenueTTM",
+            "pass": true
+          },
+          {
+            "key": "profitTTM",
+            "pass": true
+          },
+          {
+            "key": "genericDebtWarning",
+            "pass": true
+          },
+          {
+            "key": "cashGapWarning",
+            "pass": true
+          },
+          {
+            "key": "esg",
+            "pass": true
+          },
+          {
+            "key": "priceTarget",
+            "pass": true
+          },
+          {
+            "key": "validSourceIds",
+            "pass": true
+          },
+          {
+            "key": "explicitMissing",
+            "pass": true
+          }
+        ],
+        "passed": 10,
+        "total": 10,
+        "score": 1
+      },
+      "answer": {
+        "revenueGrowth": 0.2,
+        "cashProfitRatio": -0.25,
+        "revenueTTM": null,
+        "profitTTM": null,
+        "genericDebtWarning": true,
+        "cashGapWarning": true,
+        "esg": null,
+        "priceTarget": null,
+        "sources": [
+          "S1",
+          "S2"
+        ],
+        "missing": [
+          "esg",
+          "priceTarget"
+        ]
+      }
+    },
+    {
+      "fixture": "industrial-cash-gap",
+      "architecture": "committee",
+      "latencyMs": 33175.9474,
+      "calls": [
+        {
+          "role": "fundamental",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 1189.5910999999996,
+          "usage": {
+            "prompt_tokens": 427,
+            "completion_tokens": 120,
+            "total_tokens": 547
+          }
+        },
+        {
+          "role": "industry",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 8140.0687,
+          "usage": {
+            "prompt_tokens": 427,
+            "completion_tokens": 71,
+            "total_tokens": 498
+          }
+        },
+        {
+          "role": "macro",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 1623.1225999999988,
+          "usage": {
+            "prompt_tokens": 427,
+            "completion_tokens": 71,
+            "total_tokens": 498
+          }
+        },
+        {
+          "role": "technical",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 1785.4707999999991,
+          "usage": {
+            "prompt_tokens": 427,
+            "completion_tokens": 100,
+            "total_tokens": 527
+          }
+        },
+        {
+          "role": "risk",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 2994.5439000000006,
+          "usage": {
+            "prompt_tokens": 427,
+            "completion_tokens": 111,
+            "total_tokens": 538
+          }
+        },
+        {
+          "role": "valuation",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 14103.466800000002,
+          "usage": {
+            "prompt_tokens": 427,
+            "completion_tokens": 100,
+            "total_tokens": 527
+          }
+        },
+        {
+          "role": "skeptic",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 2388.5130000000026,
+          "usage": {
+            "prompt_tokens": 894,
+            "completion_tokens": 121,
+            "total_tokens": 1015
+          }
+        },
+        {
+          "role": "committee",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 6746.006099999999,
+          "usage": {
+            "prompt_tokens": 979,
+            "completion_tokens": 90,
+            "total_tokens": 1069
+          }
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 4435,
+        "completion_tokens": 784,
+        "total_tokens": 5219
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "key": "revenueGrowth",
+            "pass": true
+          },
+          {
+            "key": "cashProfitRatio",
+            "pass": true
+          },
+          {
+            "key": "revenueTTM",
+            "pass": true
+          },
+          {
+            "key": "profitTTM",
+            "pass": true
+          },
+          {
+            "key": "genericDebtWarning",
+            "pass": true
+          },
+          {
+            "key": "cashGapWarning",
+            "pass": true
+          },
+          {
+            "key": "esg",
+            "pass": true
+          },
+          {
+            "key": "priceTarget",
+            "pass": true
+          },
+          {
+            "key": "validSourceIds",
+            "pass": true
+          },
+          {
+            "key": "explicitMissing",
+            "pass": true
+          }
+        ],
+        "passed": 10,
+        "total": 10,
+        "score": 1
+      },
+      "answer": {
+        "revenueGrowth": 0.2,
+        "cashProfitRatio": -0.25,
+        "revenueTTM": null,
+        "profitTTM": null,
+        "genericDebtWarning": true,
+        "cashGapWarning": true,
+        "esg": null,
+        "priceTarget": null,
+        "sources": [
+          "S1",
+          "S2"
+        ],
+        "missing": [
+          "esg",
+          "priceTarget",
+          "operatingCashFlow_prior_quarter_for_TTM",
+          "netProfit_prior_quarter_for_TTM"
+        ]
+      }
+    },
+    {
+      "fixture": "bank-sector-exception",
+      "architecture": "single",
+      "latencyMs": 2266.3155000000042,
+      "calls": [
+        {
+          "role": "single",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 2266.274900000004,
+          "usage": {
+            "prompt_tokens": 408,
+            "completion_tokens": 94,
+            "total_tokens": 502
+          }
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 408,
+        "completion_tokens": 94,
+        "total_tokens": 502
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "key": "revenueGrowth",
+            "pass": true
+          },
+          {
+            "key": "cashProfitRatio",
+            "pass": true
+          },
+          {
+            "key": "revenueTTM",
+            "pass": true
+          },
+          {
+            "key": "profitTTM",
+            "pass": true
+          },
+          {
+            "key": "genericDebtWarning",
+            "pass": false
+          },
+          {
+            "key": "cashGapWarning",
+            "pass": true
+          },
+          {
+            "key": "esg",
+            "pass": true
+          },
+          {
+            "key": "priceTarget",
+            "pass": true
+          },
+          {
+            "key": "validSourceIds",
+            "pass": true
+          },
+          {
+            "key": "explicitMissing",
+            "pass": false
+          }
+        ],
+        "passed": 8,
+        "total": 10,
+        "score": 0.8
+      },
+      "answer": {
+        "revenueGrowth": 0.05,
+        "cashProfitRatio": null,
+        "revenueTTM": null,
+        "profitTTM": null,
+        "genericDebtWarning": null,
+        "cashGapWarning": null,
+        "esg": null,
+        "priceTarget": null,
+        "sources": [
+          "S1",
+          "S2"
+        ],
+        "missing": [
+          "operatingCashFlow",
+          "esgRating",
+          "latestPrice",
+          "revenueTTM",
+          "profitTTM",
+          "cashProfitRatio",
+          "cashGapWarning",
+          "genericDebtWarning"
+        ]
+      }
+    },
+    {
+      "fixture": "bank-sector-exception",
+      "architecture": "committee",
+      "latencyMs": 64270.4094,
+      "calls": [
+        {
+          "role": "fundamental",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 1418.6807000000044,
+          "usage": {
+            "prompt_tokens": 408,
+            "completion_tokens": 103,
+            "total_tokens": 511
+          }
+        },
+        {
+          "role": "industry",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 5447.0524000000005,
+          "usage": {
+            "prompt_tokens": 408,
+            "completion_tokens": 107,
+            "total_tokens": 515
+          }
+        },
+        {
+          "role": "technical",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 48219.48380000001,
+          "usage": {
+            "prompt_tokens": 408,
+            "completion_tokens": 103,
+            "total_tokens": 511
+          }
+        },
+        {
+          "role": "macro",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 48260.9395,
+          "usage": {
+            "prompt_tokens": 408,
+            "completion_tokens": 107,
+            "total_tokens": 515
+          }
+        },
+        {
+          "role": "risk",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 2144.9534999999887,
+          "usage": {
+            "prompt_tokens": 408,
+            "completion_tokens": 97,
+            "total_tokens": 505
+          }
+        },
+        {
+          "role": "valuation",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 4436.186500000011,
+          "usage": {
+            "prompt_tokens": 408,
+            "completion_tokens": 123,
+            "total_tokens": 531
+          }
+        },
+        {
+          "role": "skeptic",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 2487.112699999998,
+          "usage": {
+            "prompt_tokens": 876,
+            "completion_tokens": 73,
+            "total_tokens": 949
+          }
+        },
+        {
+          "role": "committee",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 3638.445599999992,
+          "usage": {
+            "prompt_tokens": 944,
+            "completion_tokens": 73,
+            "total_tokens": 1017
+          }
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 4268,
+        "completion_tokens": 786,
+        "total_tokens": 5054
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "key": "revenueGrowth",
+            "pass": true
+          },
+          {
+            "key": "cashProfitRatio",
+            "pass": true
+          },
+          {
+            "key": "revenueTTM",
+            "pass": true
+          },
+          {
+            "key": "profitTTM",
+            "pass": true
+          },
+          {
+            "key": "genericDebtWarning",
+            "pass": true
+          },
+          {
+            "key": "cashGapWarning",
+            "pass": true
+          },
+          {
+            "key": "esg",
+            "pass": true
+          },
+          {
+            "key": "priceTarget",
+            "pass": true
+          },
+          {
+            "key": "validSourceIds",
+            "pass": true
+          },
+          {
+            "key": "explicitMissing",
+            "pass": false
+          }
+        ],
+        "passed": 9,
+        "total": 10,
+        "score": 0.9
+      },
+      "answer": {
+        "revenueGrowth": 0.05,
+        "cashProfitRatio": null,
+        "revenueTTM": null,
+        "profitTTM": null,
+        "genericDebtWarning": false,
+        "cashGapWarning": null,
+        "esg": null,
+        "priceTarget": null,
+        "sources": [
+          "S1",
+          "S2"
+        ],
+        "missing": [
+          "operatingCashFlow",
+          "esgRating",
+          "latestPrice"
+        ]
+      }
+    },
+    {
+      "fixture": "cumulative-ttm-bridge",
+      "architecture": "single",
+      "latencyMs": 3259.5267999999924,
+      "calls": [
+        {
+          "role": "single",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 3259.486699999994,
+          "usage": {
+            "prompt_tokens": 450,
+            "completion_tokens": 139,
+            "total_tokens": 589
+          }
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 450,
+        "completion_tokens": 139,
+        "total_tokens": 589
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "key": "revenueGrowth",
+            "pass": true
+          },
+          {
+            "key": "cashProfitRatio",
+            "pass": true
+          },
+          {
+            "key": "revenueTTM",
+            "pass": false
+          },
+          {
+            "key": "profitTTM",
+            "pass": false
+          },
+          {
+            "key": "genericDebtWarning",
+            "pass": true
+          },
+          {
+            "key": "cashGapWarning",
+            "pass": true
+          },
+          {
+            "key": "esg",
+            "pass": true
+          },
+          {
+            "key": "priceTarget",
+            "pass": true
+          },
+          {
+            "key": "validSourceIds",
+            "pass": true
+          },
+          {
+            "key": "explicitMissing",
+            "pass": true
+          }
+        ],
+        "passed": 8,
+        "total": 10,
+        "score": 0.8
+      },
+      "answer": {
+        "revenueGrowth": null,
+        "cashProfitRatio": null,
+        "revenueTTM": null,
+        "profitTTM": null,
+        "genericDebtWarning": null,
+        "cashGapWarning": null,
+        "esg": null,
+        "priceTarget": null,
+        "sources": [
+          "S1",
+          "S2"
+        ],
+        "missing": [
+          "netProfit",
+          "operatingCashFlow",
+          "debtRatio",
+          "esgRating",
+          "latestPrice",
+          "annualRevenue.prior",
+          "revenueGrowth",
+          "cashProfitRatio",
+          "revenueTTM",
+          "profitTTM",
+          "genericDebtWarning",
+          "cashGapWarning",
+          "esg",
+          "priceTarget"
+        ]
+      }
+    },
+    {
+      "fixture": "cumulative-ttm-bridge",
+      "architecture": "committee",
+      "latencyMs": 48721.77200000001,
+      "calls": [
+        {
+          "role": "industry",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 1923.0475999999908,
+          "usage": {
+            "prompt_tokens": 450,
+            "completion_tokens": 96,
+            "total_tokens": 546
+          }
+        },
+        {
+          "role": "fundamental",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 31350.213100000008,
+          "usage": {
+            "prompt_tokens": 450,
+            "completion_tokens": 116,
+            "total_tokens": 566
+          }
+        },
+        {
+          "role": "macro",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 2316.204700000002,
+          "usage": {
+            "prompt_tokens": 450,
+            "completion_tokens": 80,
+            "total_tokens": 530
+          }
+        },
+        {
+          "role": "technical",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 3223.8631999999925,
+          "usage": {
+            "prompt_tokens": 450,
+            "completion_tokens": 117,
+            "total_tokens": 567
+          }
+        },
+        {
+          "role": "valuation",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 2360.081200000015,
+          "usage": {
+            "prompt_tokens": 450,
+            "completion_tokens": 164,
+            "total_tokens": 614
+          }
+        },
+        {
+          "role": "risk",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 3170.4737000000023,
+          "usage": {
+            "prompt_tokens": 450,
+            "completion_tokens": 118,
+            "total_tokens": 568
+          }
+        },
+        {
+          "role": "skeptic",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 6572.822000000015,
+          "usage": {
+            "prompt_tokens": 967,
+            "completion_tokens": 290,
+            "total_tokens": 1257
+          }
+        },
+        {
+          "role": "committee",
+          "status": "ok",
+          "model": "MiniMax-M3",
+          "provider": "minimax",
+          "latencyMs": 4403.061599999986,
+          "usage": {
+            "prompt_tokens": 1204,
+            "completion_tokens": 84,
+            "total_tokens": 1288
+          }
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 4871,
+        "completion_tokens": 1065,
+        "total_tokens": 5936
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "key": "revenueGrowth",
+            "pass": true
+          },
+          {
+            "key": "cashProfitRatio",
+            "pass": true
+          },
+          {
+            "key": "revenueTTM",
+            "pass": true
+          },
+          {
+            "key": "profitTTM",
+            "pass": true
+          },
+          {
+            "key": "genericDebtWarning",
+            "pass": true
+          },
+          {
+            "key": "cashGapWarning",
+            "pass": true
+          },
+          {
+            "key": "esg",
+            "pass": true
+          },
+          {
+            "key": "priceTarget",
+            "pass": true
+          },
+          {
+            "key": "validSourceIds",
+            "pass": true
+          },
+          {
+            "key": "explicitMissing",
+            "pass": true
+          }
+        ],
+        "passed": 10,
+        "total": 10,
+        "score": 1
+      },
+      "answer": {
+        "revenueGrowth": null,
+        "cashProfitRatio": null,
+        "revenueTTM": 110,
+        "profitTTM": 30,
+        "genericDebtWarning": null,
+        "cashGapWarning": null,
+        "esg": null,
+        "priceTarget": null,
+        "sources": [
+          "S1",
+          "S2"
+        ],
+        "missing": [
+          "netProfit",
+          "operatingCashFlow",
+          "debtRatio",
+          "priorAnnualRevenue",
+          "esg",
+          "priceTarget",
+          "latestPrice"
+        ]
+      }
+    }
+  ]
+}

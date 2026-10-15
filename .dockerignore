@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+data
+logs
+node_modules
+.git
+.publish
+.venv
+__pycache__
+*.zip

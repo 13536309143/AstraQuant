@@ -1,0 +1,1518 @@
+{
+  "generatedAt": "2026-10-15T02:56:27.648467+00:00",
+  "scope": "Retrospective expanding-window logistic regression. Added after seeing fixed-rule results; not a preregistered blind experiment. Not the eight-role LLM system. No parameter search. No future rows in fitting, labels or standardization.",
+  "parameters": {
+    "features": [
+      "return1",
+      "return5",
+      "return20",
+      "return60",
+      "gapMA20",
+      "gapMA50",
+      "MA50vs200",
+      "volatility20",
+      "simpleRSI14"
+    ],
+    "l2": 0.01,
+    "gradientSteps": 200,
+    "learningRate": 0.08,
+    "refitEveryBars": 20,
+    "firstTrainingFraction": 0.6,
+    "decisionThreshold": 0.5
+  },
+  "aggregates": [
+    {
+      "horizon": 1,
+      "methods": [
+        {
+          "method": "logistic",
+          "n": 7107,
+          "accuracy": 0.5140002814126917,
+          "balancedAccuracy": 0.5155042189283088,
+          "brier": 0.2520275335531179,
+          "logLoss": 0.6973594908190726
+        },
+        {
+          "method": "expanding_prior",
+          "n": 7107,
+          "accuracy": 0.5196285352469396,
+          "balancedAccuracy": 0.5217373549785477,
+          "brier": 0.24989066747604885,
+          "logLoss": 0.6929334887638418
+        },
+        {
+          "method": "always_up",
+          "n": 7107,
+          "accuracy": 0.5083720275784438,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null
+        },
+        {
+          "method": "trend",
+          "n": 7107,
+          "accuracy": 0.4924722104966934,
+          "balancedAccuracy": 0.49102193456149806,
+          "brier": null,
+          "logLoss": null
+        }
+      ],
+      "logisticAccuracyCI": [
+        0.49909772257839424,
+        0.5288292520954864
+      ],
+      "pairedGainVsPriorCI": [
+        -0.017038664875516443,
+        0.00511536296621333
+      ]
+    },
+    {
+      "horizon": 5,
+      "methods": [
+        {
+          "method": "logistic",
+          "n": 1424,
+          "accuracy": 0.5273876404494382,
+          "balancedAccuracy": 0.5270958809276566,
+          "brier": 0.253202730574455,
+          "logLoss": 0.6999905384233168
+        },
+        {
+          "method": "expanding_prior",
+          "n": 1424,
+          "accuracy": 0.5196629213483146,
+          "balancedAccuracy": 0.5189477327795085,
+          "brier": 0.2493500799037944,
+          "logLoss": 0.6918605549274859
+        },
+        {
+          "method": "always_up",
+          "n": 1424,
+          "accuracy": 0.5259831460674157,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null
+        },
+        {
+          "method": "trend",
+          "n": 1424,
+          "accuracy": 0.47752808988764045,
+          "balancedAccuracy": 0.47252732037778766,
+          "brier": null,
+          "logLoss": null
+        }
+      ],
+      "logisticAccuracyCI": [
+        0.4899473930735407,
+        0.5622631744577364
+      ],
+      "pairedGainVsPriorCI": [
+        -0.012315522652289409,
+        0.030304029743343754
+      ]
+    },
+    {
+      "horizon": 20,
+      "methods": [
+        {
+          "method": "logistic",
+          "n": 348,
+          "accuracy": 0.5316091954022989,
+          "balancedAccuracy": 0.5382828282828283,
+          "brier": 0.26275938234523716,
+          "logLoss": 0.7252115759370461
+        },
+        {
+          "method": "expanding_prior",
+          "n": 348,
+          "accuracy": 0.5373563218390804,
+          "balancedAccuracy": 0.5433333333333333,
+          "brier": 0.2515848650564627,
+          "logLoss": 0.6966601926106332
+        },
+        {
+          "method": "always_up",
+          "n": 348,
+          "accuracy": 0.5689655172413793,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null
+        },
+        {
+          "method": "trend",
+          "n": 348,
+          "accuracy": 0.46264367816091956,
+          "balancedAccuracy": 0.4485858585858586,
+          "brier": null,
+          "logLoss": null
+        }
+      ],
+      "logisticAccuracyCI": [
+        0.46836258210180626,
+        0.5916666666666667
+      ],
+      "pairedGainVsPriorCI": [
+        -0.06106446648426812,
+        0.04445692883895136
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "symbol": "IDX:CSI300",
+      "metrics": [
+        {
+          "method": "logistic",
+          "n": 598,
+          "accuracy": 0.5133779264214047,
+          "balancedAccuracy": 0.5239919354838709,
+          "brier": 0.25591027472934536,
+          "logLoss": 0.7059231741566506,
+          "horizon": 1
+        },
+        {
+          "method": "expanding_prior",
+          "n": 598,
+          "accuracy": 0.4816053511705686,
+          "balancedAccuracy": 0.5,
+          "brier": 0.25138817356058596,
+          "logLoss": 0.6959272504935831,
+          "horizon": 1
+        },
+        {
+          "method": "always_up",
+          "n": 598,
+          "accuracy": 0.5183946488294314,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 1
+        },
+        {
+          "method": "trend",
+          "n": 598,
+          "accuracy": 0.5183946488294314,
+          "balancedAccuracy": 0.5156474014336918,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 1
+        },
+        {
+          "method": "logistic",
+          "n": 119,
+          "accuracy": 0.5210084033613446,
+          "balancedAccuracy": 0.5327380952380952,
+          "brier": 0.25578538204626416,
+          "logLoss": 0.7056566098109606,
+          "horizon": 5
+        },
+        {
+          "method": "expanding_prior",
+          "n": 119,
+          "accuracy": 0.47058823529411764,
+          "balancedAccuracy": 0.5,
+          "brier": 0.2532671473511124,
+          "logLoss": 0.699704959599167,
+          "horizon": 5
+        },
+        {
+          "method": "always_up",
+          "n": 119,
+          "accuracy": 0.5294117647058824,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 5
+        },
+        {
+          "method": "trend",
+          "n": 119,
+          "accuracy": 0.4957983193277311,
+          "balancedAccuracy": 0.4900793650793651,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 5
+        },
+        {
+          "method": "logistic",
+          "n": 29,
+          "accuracy": 0.4482758620689655,
+          "balancedAccuracy": 0.4595238095238095,
+          "brier": 0.3071478168605747,
+          "logLoss": 0.8311906758493547,
+          "horizon": 20
+        },
+        {
+          "method": "expanding_prior",
+          "n": 29,
+          "accuracy": 0.4827586206896552,
+          "balancedAccuracy": 0.5,
+          "brier": 0.27180306296693596,
+          "logLoss": 0.7382983621330335,
+          "horizon": 20
+        },
+        {
+          "method": "always_up",
+          "n": 29,
+          "accuracy": 0.5172413793103449,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 20
+        },
+        {
+          "method": "trend",
+          "n": 29,
+          "accuracy": 0.4827586206896552,
+          "balancedAccuracy": 0.47857142857142854,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 20
+        }
+      ]
+    },
+    {
+      "symbol": "IDX:HSI",
+      "metrics": [
+        {
+          "method": "logistic",
+          "n": 598,
+          "accuracy": 0.5066889632107023,
+          "balancedAccuracy": 0.5153351914660219,
+          "brier": 0.25145424867327015,
+          "logLoss": 0.6961443265516241,
+          "horizon": 1
+        },
+        {
+          "method": "expanding_prior",
+          "n": 598,
+          "accuracy": 0.4866220735785953,
+          "balancedAccuracy": 0.5,
+          "brier": 0.25098910758999726,
+          "logLoss": 0.6951270374668383,
+          "horizon": 1
+        },
+        {
+          "method": "always_up",
+          "n": 598,
+          "accuracy": 0.5133779264214047,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 1
+        },
+        {
+          "method": "trend",
+          "n": 598,
+          "accuracy": 0.451505016722408,
+          "balancedAccuracy": 0.44896291570122127,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 1
+        },
+        {
+          "method": "logistic",
+          "n": 119,
+          "accuracy": 0.5210084033613446,
+          "balancedAccuracy": 0.5357142857142857,
+          "brier": 0.2512092000468388,
+          "logLoss": 0.6956012560026813,
+          "horizon": 5
+        },
+        {
+          "method": "expanding_prior",
+          "n": 119,
+          "accuracy": 0.44537815126050423,
+          "balancedAccuracy": 0.4494047619047619,
+          "brier": 0.251446515853453,
+          "logLoss": 0.6960439984447896,
+          "horizon": 5
+        },
+        {
+          "method": "always_up",
+          "n": 119,
+          "accuracy": 0.5294117647058824,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 5
+        },
+        {
+          "method": "trend",
+          "n": 119,
+          "accuracy": 0.42857142857142855,
+          "balancedAccuracy": 0.42261904761904767,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 5
+        },
+        {
+          "method": "logistic",
+          "n": 29,
+          "accuracy": 0.3448275862068966,
+          "balancedAccuracy": 0.4368686868686869,
+          "brier": 0.3158984517843783,
+          "logLoss": 0.8493986150734534,
+          "horizon": 20
+        },
+        {
+          "method": "expanding_prior",
+          "n": 29,
+          "accuracy": 0.3793103448275862,
+          "balancedAccuracy": 0.5,
+          "brier": 0.2815229159221757,
+          "logLoss": 0.7573374412484284,
+          "horizon": 20
+        },
+        {
+          "method": "always_up",
+          "n": 29,
+          "accuracy": 0.6206896551724138,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 20
+        },
+        {
+          "method": "trend",
+          "n": 29,
+          "accuracy": 0.4827586206896552,
+          "balancedAccuracy": 0.44191919191919193,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 20
+        }
+      ]
+    },
+    {
+      "symbol": "IDX:SPX",
+      "metrics": [
+        {
+          "method": "logistic",
+          "n": 598,
+          "accuracy": 0.5284280936454849,
+          "balancedAccuracy": 0.485755761204863,
+          "brier": 0.2512488566303954,
+          "logLoss": 0.6957282507827761,
+          "horizon": 1
+        },
+        {
+          "method": "expanding_prior",
+          "n": 598,
+          "accuracy": 0.5585284280936454,
+          "balancedAccuracy": 0.5,
+          "brier": 0.2481279345210998,
+          "logLoss": 0.6894014926984762,
+          "horizon": 1
+        },
+        {
+          "method": "always_up",
+          "n": 598,
+          "accuracy": 0.5585284280936454,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 1
+        },
+        {
+          "method": "trend",
+          "n": 598,
+          "accuracy": 0.5100334448160535,
+          "balancedAccuracy": 0.47683043004899295,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 1
+        },
+        {
+          "method": "logistic",
+          "n": 119,
+          "accuracy": 0.5966386554621849,
+          "balancedAccuracy": 0.4721542227662179,
+          "brier": 0.24149216893606104,
+          "logLoss": 0.6760908137307352,
+          "horizon": 5
+        },
+        {
+          "method": "expanding_prior",
+          "n": 119,
+          "accuracy": 0.6386554621848739,
+          "balancedAccuracy": 0.5,
+          "brier": 0.2356779649521,
+          "logLoss": 0.6643548985192388,
+          "horizon": 5
+        },
+        {
+          "method": "always_up",
+          "n": 119,
+          "accuracy": 0.6386554621848739,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 5
+        },
+        {
+          "method": "trend",
+          "n": 119,
+          "accuracy": 0.5798319327731093,
+          "balancedAccuracy": 0.4943390452876377,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 5
+        },
+        {
+          "method": "logistic",
+          "n": 29,
+          "accuracy": 0.6206896551724138,
+          "balancedAccuracy": 0.4090909090909091,
+          "brier": 0.23621865018013988,
+          "logLoss": 0.6672434382760837,
+          "horizon": 20
+        },
+        {
+          "method": "expanding_prior",
+          "n": 29,
+          "accuracy": 0.7586206896551724,
+          "balancedAccuracy": 0.5,
+          "brier": 0.21163170413191404,
+          "logLoss": 0.6156792405970026,
+          "horizon": 20
+        },
+        {
+          "method": "always_up",
+          "n": 29,
+          "accuracy": 0.7586206896551724,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 20
+        },
+        {
+          "method": "trend",
+          "n": 29,
+          "accuracy": 0.6896551724137931,
+          "balancedAccuracy": 0.5032467532467533,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 20
+        }
+      ]
+    },
+    {
+      "symbol": "SH600519",
+      "metrics": [
+        {
+          "method": "logistic",
+          "n": 596,
+          "accuracy": 0.540268456375839,
+          "balancedAccuracy": 0.5155850675428989,
+          "brier": 0.25096288571193853,
+          "logLoss": 0.6951378915778593,
+          "horizon": 1
+        },
+        {
+          "method": "expanding_prior",
+          "n": 596,
+          "accuracy": 0.5570469798657718,
+          "balancedAccuracy": 0.5,
+          "brier": 0.2474210211211432,
+          "logLoss": 0.6879838825745771,
+          "horizon": 1
+        },
+        {
+          "method": "always_up",
+          "n": 596,
+          "accuracy": 0.4429530201342282,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 1
+        },
+        {
+          "method": "trend",
+          "n": 596,
+          "accuracy": 0.4798657718120805,
+          "balancedAccuracy": 0.47067816721431177,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 1
+        },
+        {
+          "method": "logistic",
+          "n": 119,
+          "accuracy": 0.5294117647058824,
+          "balancedAccuracy": 0.5181532304173814,
+          "brier": 0.25408070983642983,
+          "logLoss": 0.7024250960036222,
+          "horizon": 5
+        },
+        {
+          "method": "expanding_prior",
+          "n": 119,
+          "accuracy": 0.5546218487394958,
+          "balancedAccuracy": 0.5,
+          "brier": 0.2486651309942597,
+          "logLoss": 0.6904853228939548,
+          "horizon": 5
+        },
+        {
+          "method": "always_up",
+          "n": 119,
+          "accuracy": 0.44537815126050423,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 5
+        },
+        {
+          "method": "trend",
+          "n": 119,
+          "accuracy": 0.44537815126050423,
+          "balancedAccuracy": 0.43682104059462545,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 5
+        },
+        {
+          "method": "logistic",
+          "n": 29,
+          "accuracy": 0.4827586206896552,
+          "balancedAccuracy": 0.4857142857142857,
+          "brier": 0.2397917295315151,
+          "logLoss": 0.6727251422863245,
+          "horizon": 20
+        },
+        {
+          "method": "expanding_prior",
+          "n": 29,
+          "accuracy": 0.4827586206896552,
+          "balancedAccuracy": 0.5,
+          "brier": 0.2599754881161601,
+          "logLoss": 0.7133546473240197,
+          "horizon": 20
+        },
+        {
+          "method": "always_up",
+          "n": 29,
+          "accuracy": 0.5172413793103449,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 20
+        },
+        {
+          "method": "trend",
+          "n": 29,
+          "accuracy": 0.3103448275862069,
+          "balancedAccuracy": 0.3119047619047619,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 20
+        }
+      ]
+    },
+    {
+      "symbol": "SZ000001",
+      "metrics": [
+        {
+          "method": "logistic",
+          "n": 580,
+          "accuracy": 0.503448275862069,
+          "balancedAccuracy": 0.5001189117199392,
+          "brier": 0.254795334620062,
+          "logLoss": 0.7029763719772515,
+          "horizon": 1
+        },
+        {
+          "method": "expanding_prior",
+          "n": 580,
+          "accuracy": 0.503448275862069,
+          "balancedAccuracy": 0.5,
+          "brier": 0.252554134111037,
+          "logLoss": 0.6982906167550712,
+          "horizon": 1
+        },
+        {
+          "method": "always_up",
+          "n": 580,
+          "accuracy": 0.496551724137931,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 1
+        },
+        {
+          "method": "trend",
+          "n": 580,
+          "accuracy": 0.4810344827586207,
+          "balancedAccuracy": 0.4814497716894977,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 1
+        },
+        {
+          "method": "logistic",
+          "n": 116,
+          "accuracy": 0.5172413793103449,
+          "balancedAccuracy": 0.5,
+          "brier": 0.2627481849120256,
+          "logLoss": 0.719800341080366,
+          "horizon": 5
+        },
+        {
+          "method": "expanding_prior",
+          "n": 116,
+          "accuracy": 0.5172413793103449,
+          "balancedAccuracy": 0.5,
+          "brier": 0.25352668202665185,
+          "logLoss": 0.7003113611380823,
+          "horizon": 5
+        },
+        {
+          "method": "always_up",
+          "n": 116,
+          "accuracy": 0.4827586206896552,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 5
+        },
+        {
+          "method": "trend",
+          "n": 116,
+          "accuracy": 0.45689655172413796,
+          "balancedAccuracy": 0.45892857142857146,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 5
+        },
+        {
+          "method": "logistic",
+          "n": 29,
+          "accuracy": 0.5517241379310345,
+          "balancedAccuracy": 0.5,
+          "brier": 0.26110649189275476,
+          "logLoss": 0.7266990875377539,
+          "horizon": 20
+        },
+        {
+          "method": "expanding_prior",
+          "n": 29,
+          "accuracy": 0.5517241379310345,
+          "balancedAccuracy": 0.5,
+          "brier": 0.25231978460485227,
+          "logLoss": 0.6983305608909115,
+          "horizon": 20
+        },
+        {
+          "method": "always_up",
+          "n": 29,
+          "accuracy": 0.4482758620689655,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 20
+        },
+        {
+          "method": "trend",
+          "n": 29,
+          "accuracy": 0.41379310344827586,
+          "balancedAccuracy": 0.4110576923076923,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 20
+        }
+      ]
+    },
+    {
+      "symbol": "SZ300750",
+      "metrics": [
+        {
+          "method": "logistic",
+          "n": 597,
+          "accuracy": 0.5360134003350083,
+          "balancedAccuracy": 0.5038808664259927,
+          "brier": 0.2501087595997842,
+          "logLoss": 0.6934049556276718,
+          "horizon": 1
+        },
+        {
+          "method": "expanding_prior",
+          "n": 597,
+          "accuracy": 0.5360134003350083,
+          "balancedAccuracy": 0.5,
+          "brier": 0.24896896631302534,
+          "logLoss": 0.6910864765484331,
+          "horizon": 1
+        },
+        {
+          "method": "always_up",
+          "n": 597,
+          "accuracy": 0.4639865996649916,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 1
+        },
+        {
+          "method": "trend",
+          "n": 597,
+          "accuracy": 0.47738693467336685,
+          "balancedAccuracy": 0.48387861010830324,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 1
+        },
+        {
+          "method": "logistic",
+          "n": 119,
+          "accuracy": 0.5126050420168067,
+          "balancedAccuracy": 0.5120056497175142,
+          "brier": 0.2520766930422745,
+          "logLoss": 0.6967058033938783,
+          "horizon": 5
+        },
+        {
+          "method": "expanding_prior",
+          "n": 119,
+          "accuracy": 0.3949579831932773,
+          "balancedAccuracy": 0.3968926553672316,
+          "brier": 0.25187769713746666,
+          "logLoss": 0.6969038172420627,
+          "horizon": 5
+        },
+        {
+          "method": "always_up",
+          "n": 119,
+          "accuracy": 0.4957983193277311,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 5
+        },
+        {
+          "method": "trend",
+          "n": 119,
+          "accuracy": 0.4789915966386555,
+          "balancedAccuracy": 0.47994350282485876,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 5
+        },
+        {
+          "method": "logistic",
+          "n": 29,
+          "accuracy": 0.5172413793103449,
+          "balancedAccuracy": 0.5759803921568627,
+          "brier": 0.2733116357164103,
+          "logLoss": 0.7420433899288569,
+          "horizon": 20
+        },
+        {
+          "method": "expanding_prior",
+          "n": 29,
+          "accuracy": 0.3793103448275862,
+          "balancedAccuracy": 0.38480392156862747,
+          "brier": 0.2561678743945217,
+          "logLoss": 0.7054978091135488,
+          "horizon": 20
+        },
+        {
+          "method": "always_up",
+          "n": 29,
+          "accuracy": 0.5862068965517241,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 20
+        },
+        {
+          "method": "trend",
+          "n": 29,
+          "accuracy": 0.3793103448275862,
+          "balancedAccuracy": 0.3480392156862745,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 20
+        }
+      ]
+    },
+    {
+      "symbol": "HK00700",
+      "metrics": [
+        {
+          "method": "logistic",
+          "n": 582,
+          "accuracy": 0.5189003436426117,
+          "balancedAccuracy": 0.5125287967393231,
+          "brier": 0.25165751868466035,
+          "logLoss": 0.6965356058420453,
+          "horizon": 1
+        },
+        {
+          "method": "expanding_prior",
+          "n": 582,
+          "accuracy": 0.5103092783505154,
+          "balancedAccuracy": 0.5,
+          "brier": 0.25048662032959185,
+          "logLoss": 0.6941236542305745,
+          "horizon": 1
+        },
+        {
+          "method": "always_up",
+          "n": 582,
+          "accuracy": 0.4896907216494845,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 1
+        },
+        {
+          "method": "trend",
+          "n": 582,
+          "accuracy": 0.5085910652920962,
+          "balancedAccuracy": 0.5088782562466773,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 1
+        },
+        {
+          "method": "logistic",
+          "n": 119,
+          "accuracy": 0.5210084033613446,
+          "balancedAccuracy": 0.5172316384180791,
+          "brier": 0.25295071376286576,
+          "logLoss": 0.6992214426442224,
+          "horizon": 5
+        },
+        {
+          "method": "expanding_prior",
+          "n": 119,
+          "accuracy": 0.5042016806722689,
+          "balancedAccuracy": 0.5,
+          "brier": 0.25012852154671167,
+          "logLoss": 0.6934052625144563,
+          "horizon": 5
+        },
+        {
+          "method": "always_up",
+          "n": 119,
+          "accuracy": 0.4957983193277311,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 5
+        },
+        {
+          "method": "trend",
+          "n": 119,
+          "accuracy": 0.453781512605042,
+          "balancedAccuracy": 0.45409604519774016,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 5
+        },
+        {
+          "method": "logistic",
+          "n": 29,
+          "accuracy": 0.41379310344827586,
+          "balancedAccuracy": 0.40476190476190477,
+          "brier": 0.2622030060113165,
+          "logLoss": 0.7177689019645007,
+          "horizon": 20
+        },
+        {
+          "method": "expanding_prior",
+          "n": 29,
+          "accuracy": 0.4827586206896552,
+          "balancedAccuracy": 0.46904761904761905,
+          "brier": 0.25487339726470587,
+          "logLoss": 0.7029419722337052,
+          "horizon": 20
+        },
+        {
+          "method": "always_up",
+          "n": 29,
+          "accuracy": 0.4827586206896552,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 20
+        },
+        {
+          "method": "trend",
+          "n": 29,
+          "accuracy": 0.5172413793103449,
+          "balancedAccuracy": 0.519047619047619,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 20
+        }
+      ]
+    },
+    {
+      "symbol": "HK00941",
+      "metrics": [
+        {
+          "method": "logistic",
+          "n": 572,
+          "accuracy": 0.48951048951048953,
+          "balancedAccuracy": 0.48997516728442636,
+          "brier": 0.2514941466952143,
+          "logLoss": 0.6961422074951709,
+          "horizon": 1
+        },
+        {
+          "method": "expanding_prior",
+          "n": 572,
+          "accuracy": 0.47027972027972026,
+          "balancedAccuracy": 0.470946946065299,
+          "brier": 0.2504482606420175,
+          "logLoss": 0.6940437780822292,
+          "horizon": 1
+        },
+        {
+          "method": "always_up",
+          "n": 572,
+          "accuracy": 0.5122377622377622,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 1
+        },
+        {
+          "method": "trend",
+          "n": 572,
+          "accuracy": 0.5052447552447552,
+          "balancedAccuracy": 0.5010520263740565,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 1
+        },
+        {
+          "method": "logistic",
+          "n": 119,
+          "accuracy": 0.4957983193277311,
+          "balancedAccuracy": 0.49971751412429377,
+          "brier": 0.25743400551297957,
+          "logLoss": 0.7082959899262153,
+          "horizon": 5
+        },
+        {
+          "method": "expanding_prior",
+          "n": 119,
+          "accuracy": 0.4957983193277311,
+          "balancedAccuracy": 0.5,
+          "brier": 0.25540530972806674,
+          "logLoss": 0.7040623487177928,
+          "horizon": 5
+        },
+        {
+          "method": "always_up",
+          "n": 119,
+          "accuracy": 0.4957983193277311,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 5
+        },
+        {
+          "method": "trend",
+          "n": 119,
+          "accuracy": 0.46218487394957986,
+          "balancedAccuracy": 0.46355932203389827,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 5
+        },
+        {
+          "method": "logistic",
+          "n": 29,
+          "accuracy": 0.6206896551724138,
+          "balancedAccuracy": 0.5,
+          "brier": 0.2546854746501983,
+          "logLoss": 0.7100764550063637,
+          "horizon": 20
+        },
+        {
+          "method": "expanding_prior",
+          "n": 29,
+          "accuracy": 0.6206896551724138,
+          "balancedAccuracy": 0.5,
+          "brier": 0.24029139317304843,
+          "logLoss": 0.674416532419758,
+          "horizon": 20
+        },
+        {
+          "method": "always_up",
+          "n": 29,
+          "accuracy": 0.6206896551724138,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 20
+        },
+        {
+          "method": "trend",
+          "n": 29,
+          "accuracy": 0.3793103448275862,
+          "balancedAccuracy": 0.35858585858585856,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 20
+        }
+      ]
+    },
+    {
+      "symbol": "HK09988",
+      "metrics": [
+        {
+          "method": "logistic",
+          "n": 593,
+          "accuracy": 0.5143338954468802,
+          "balancedAccuracy": 0.5042911127299217,
+          "brier": 0.25103129632833066,
+          "logLoss": 0.6952302948164506,
+          "horizon": 1
+        },
+        {
+          "method": "expanding_prior",
+          "n": 593,
+          "accuracy": 0.5126475548060708,
+          "balancedAccuracy": 0.5,
+          "brier": 0.2514539069134104,
+          "logLoss": 0.6960771652913089,
+          "horizon": 1
+        },
+        {
+          "method": "always_up",
+          "n": 593,
+          "accuracy": 0.4873524451939292,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 1
+        },
+        {
+          "method": "trend",
+          "n": 593,
+          "accuracy": 0.4856661045531197,
+          "balancedAccuracy": 0.4858916863959206,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 1
+        },
+        {
+          "method": "logistic",
+          "n": 118,
+          "accuracy": 0.5084745762711864,
+          "balancedAccuracy": 0.5014367816091954,
+          "brier": 0.2609949387183746,
+          "logLoss": 0.716368958691985,
+          "horizon": 5
+        },
+        {
+          "method": "expanding_prior",
+          "n": 118,
+          "accuracy": 0.5084745762711864,
+          "balancedAccuracy": 0.5,
+          "brier": 0.2535931842959883,
+          "logLoss": 0.7004013029591353,
+          "horizon": 5
+        },
+        {
+          "method": "always_up",
+          "n": 118,
+          "accuracy": 0.4915254237288136,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 5
+        },
+        {
+          "method": "trend",
+          "n": 118,
+          "accuracy": 0.4830508474576271,
+          "balancedAccuracy": 0.48304597701149427,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 5
+        },
+        {
+          "method": "logistic",
+          "n": 29,
+          "accuracy": 0.5517241379310345,
+          "balancedAccuracy": 0.5452380952380952,
+          "brier": 0.25099106624630163,
+          "logLoss": 0.6923497266193356,
+          "horizon": 20
+        },
+        {
+          "method": "expanding_prior",
+          "n": 29,
+          "accuracy": 0.5172413793103449,
+          "balancedAccuracy": 0.5,
+          "brier": 0.25923141101836406,
+          "logLoss": 0.7120103205008804,
+          "horizon": 20
+        },
+        {
+          "method": "always_up",
+          "n": 29,
+          "accuracy": 0.4827586206896552,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 20
+        },
+        {
+          "method": "trend",
+          "n": 29,
+          "accuracy": 0.4482758620689655,
+          "balancedAccuracy": 0.4476190476190476,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 20
+        }
+      ]
+    },
+    {
+      "symbol": "US:AAPL",
+      "metrics": [
+        {
+          "method": "logistic",
+          "n": 597,
+          "accuracy": 0.5058626465661642,
+          "balancedAccuracy": 0.47119231643555354,
+          "brier": 0.2495306741003421,
+          "logLoss": 0.6923198617204072,
+          "horizon": 1
+        },
+        {
+          "method": "expanding_prior",
+          "n": 597,
+          "accuracy": 0.5561139028475712,
+          "balancedAccuracy": 0.5,
+          "brier": 0.24799351162570116,
+          "logLoss": 0.6891320493264129,
+          "horizon": 1
+        },
+        {
+          "method": "always_up",
+          "n": 597,
+          "accuracy": 0.5561139028475712,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 1
+        },
+        {
+          "method": "trend",
+          "n": 597,
+          "accuracy": 0.5125628140703518,
+          "balancedAccuracy": 0.4939702205046601,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 1
+        },
+        {
+          "method": "logistic",
+          "n": 119,
+          "accuracy": 0.4957983193277311,
+          "balancedAccuracy": 0.4748427672955975,
+          "brier": 0.24848333955487023,
+          "logLoss": 0.6906720231287689,
+          "horizon": 5
+        },
+        {
+          "method": "expanding_prior",
+          "n": 119,
+          "accuracy": 0.5546218487394958,
+          "balancedAccuracy": 0.5,
+          "brier": 0.24828022239005687,
+          "logLoss": 0.6897145212710288,
+          "horizon": 5
+        },
+        {
+          "method": "always_up",
+          "n": 119,
+          "accuracy": 0.5546218487394958,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 5
+        },
+        {
+          "method": "trend",
+          "n": 119,
+          "accuracy": 0.47058823529411764,
+          "balancedAccuracy": 0.4521154945683248,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 5
+        },
+        {
+          "method": "logistic",
+          "n": 29,
+          "accuracy": 0.6206896551724138,
+          "balancedAccuracy": 0.5684210526315789,
+          "brier": 0.2541180045707875,
+          "logLoss": 0.7088582804066931,
+          "horizon": 20
+        },
+        {
+          "method": "expanding_prior",
+          "n": 29,
+          "accuracy": 0.6551724137931034,
+          "balancedAccuracy": 0.5,
+          "brier": 0.23703447367596808,
+          "logLoss": 0.6672095209979456,
+          "horizon": 20
+        },
+        {
+          "method": "always_up",
+          "n": 29,
+          "accuracy": 0.6551724137931034,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 20
+        },
+        {
+          "method": "trend",
+          "n": 29,
+          "accuracy": 0.4482758620689655,
+          "balancedAccuracy": 0.3894736842105263,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 20
+        }
+      ]
+    },
+    {
+      "symbol": "US:MSFT",
+      "metrics": [
+        {
+          "method": "logistic",
+          "n": 598,
+          "accuracy": 0.49331103678929766,
+          "balancedAccuracy": 0.4742924528301887,
+          "brier": 0.2547976723854925,
+          "logLoss": 0.7028919964665339,
+          "horizon": 1
+        },
+        {
+          "method": "expanding_prior",
+          "n": 598,
+          "accuracy": 0.5317725752508361,
+          "balancedAccuracy": 0.5,
+          "brier": 0.24954107828849648,
+          "logLoss": 0.6922298129911049,
+          "horizon": 1
+        },
+        {
+          "method": "always_up",
+          "n": 598,
+          "accuracy": 0.5317725752508361,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 1
+        },
+        {
+          "method": "trend",
+          "n": 598,
+          "accuracy": 0.5016722408026756,
+          "balancedAccuracy": 0.501358939802336,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 1
+        },
+        {
+          "method": "logistic",
+          "n": 119,
+          "accuracy": 0.5714285714285714,
+          "balancedAccuracy": 0.5,
+          "brier": 0.24990065786079255,
+          "logLoss": 0.6930805462011796,
+          "horizon": 5
+        },
+        {
+          "method": "expanding_prior",
+          "n": 119,
+          "accuracy": 0.5714285714285714,
+          "balancedAccuracy": 0.5,
+          "brier": 0.24601202795253688,
+          "logLoss": 0.6851656517814977,
+          "horizon": 5
+        },
+        {
+          "method": "always_up",
+          "n": 119,
+          "accuracy": 0.5714285714285714,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 5
+        },
+        {
+          "method": "trend",
+          "n": 119,
+          "accuracy": 0.5294117647058824,
+          "balancedAccuracy": 0.5294117647058824,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 5
+        },
+        {
+          "method": "logistic",
+          "n": 29,
+          "accuracy": 0.5172413793103449,
+          "balancedAccuracy": 0.5119047619047619,
+          "brier": 0.2624508922664265,
+          "logLoss": 0.7184067165552908,
+          "horizon": 20
+        },
+        {
+          "method": "expanding_prior",
+          "n": 29,
+          "accuracy": 0.5172413793103449,
+          "balancedAccuracy": 0.5,
+          "brier": 0.25512642167232435,
+          "logLoss": 0.7034728410191746,
+          "horizon": 20
+        },
+        {
+          "method": "always_up",
+          "n": 29,
+          "accuracy": 0.5172413793103449,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 20
+        },
+        {
+          "method": "trend",
+          "n": 29,
+          "accuracy": 0.41379310344827586,
+          "balancedAccuracy": 0.4119047619047619,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 20
+        }
+      ]
+    },
+    {
+      "symbol": "US:NVDA",
+      "metrics": [
+        {
+          "method": "logistic",
+          "n": 598,
+          "accuracy": 0.5167224080267558,
+          "balancedAccuracy": 0.49254870275608226,
+          "brier": 0.25136968097990353,
+          "logLoss": 0.6959327805602618,
+          "horizon": 1
+        },
+        {
+          "method": "expanding_prior",
+          "n": 598,
+          "accuracy": 0.5284280936454849,
+          "balancedAccuracy": 0.5,
+          "brier": 0.24943575141030186,
+          "logLoss": 0.692020302875041,
+          "horizon": 1
+        },
+        {
+          "method": "always_up",
+          "n": 598,
+          "accuracy": 0.5284280936454849,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 1
+        },
+        {
+          "method": "trend",
+          "n": 598,
+          "accuracy": 0.4782608695652174,
+          "balancedAccuracy": 0.4697010503635874,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 1
+        },
+        {
+          "method": "logistic",
+          "n": 119,
+          "accuracy": 0.5378151260504201,
+          "balancedAccuracy": 0.463768115942029,
+          "brier": 0.2515828951103781,
+          "logLoss": 0.696604621038631,
+          "horizon": 5
+        },
+        {
+          "method": "expanding_prior",
+          "n": 119,
+          "accuracy": 0.5798319327731093,
+          "balancedAccuracy": 0.5,
+          "brier": 0.24446150344705136,
+          "logLoss": 0.682058030575209,
+          "horizon": 5
+        },
+        {
+          "method": "always_up",
+          "n": 119,
+          "accuracy": 0.5798319327731093,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 5
+        },
+        {
+          "method": "trend",
+          "n": 119,
+          "accuracy": 0.44537815126050423,
+          "balancedAccuracy": 0.4171014492753623,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 5
+        },
+        {
+          "method": "logistic",
+          "n": 29,
+          "accuracy": 0.6896551724137931,
+          "balancedAccuracy": 0.6085858585858586,
+          "brier": 0.23518936843204202,
+          "logLoss": 0.6657784817405421,
+          "horizon": 20
+        },
+        {
+          "method": "expanding_prior",
+          "n": 29,
+          "accuracy": 0.6206896551724138,
+          "balancedAccuracy": 0.5,
+          "brier": 0.23904045373658184,
+          "logLoss": 0.6713730628491892,
+          "horizon": 20
+        },
+        {
+          "method": "always_up",
+          "n": 29,
+          "accuracy": 0.6206896551724138,
+          "balancedAccuracy": 0.5,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 20
+        },
+        {
+          "method": "trend",
+          "n": 29,
+          "accuracy": 0.5862068965517241,
+          "balancedAccuracy": 0.5606060606060606,
+          "brier": null,
+          "logLoss": null,
+          "horizon": 20
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "astraquant",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "AstraQuant: evidence-first multi-agent equity research for A-shares, Hong Kong and US markets",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node --env-file=.env server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check server.mjs && node --check public/app.js",
+    "experiments": "node experiments/run.mjs",
+    "experiment:llm": "node --env-file=.env experiments/llm-audit.mjs",
+    "release:check": "node scripts/release-check.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "^30.1.2"
+  }
+}

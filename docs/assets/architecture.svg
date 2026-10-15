@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" role="img" aria-labelledby="title desc">
+<title id="title">AstraQuant — Evidence-first multi-agent equity research</title><desc id="desc">Evidence flows to six specialist roles, then a skeptic and a synthesis committee.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#102e2a"/><stop offset="1" stop-color="#204e42"/></linearGradient><style>text{font-family:Segoe UI,Arial,Microsoft YaHei,sans-serif}.small{font-size:14px;fill:#b5cdc3}.node{fill:#244b41;stroke:#577e69}.label{font-size:16px;fill:#ecf4ee}.line{stroke:#6d9a80;stroke-width:1.5;fill:none}</style></defs>
+<rect width="1280" height="440" rx="22" fill="url(#bg)"/>
+<g opacity=".24" fill="#b9d7b2"><circle cx="1050" cy="55" r="2"/><circle cx="1190" cy="122" r="3"/><circle cx="998" cy="170" r="2"/><circle cx="1120" cy="230" r="2"/><circle cx="1210" cy="330" r="2"/></g>
+<text x="54" y="65" fill="#c4d49b" font-size="14" letter-spacing="4">EVIDENCE FIRST. THINK TOGETHER.</text>
+<text x="50" y="123" fill="#f2f5e9" font-size="48" font-weight="650">AstraQuant <tspan font-size="32" fill="#c4d49b">· 星衡智研</tspan></text>
+<text x="54" y="159" class="small" font-size="17">Multi-agent equity research for A-shares, Hong Kong and US markets</text>
+<path d="M235 291H282M282 227V355M282 227H320M282 291H320M282 355H320M500 227H710M500 291H710M500 355H710M710 227V355M710 291H764M942 291H987" class="line"/>
+<rect x="54" y="247" width="181" height="88" rx="14" class="node"/><text x="78" y="279" class="label">Evidence package</text><text x="78" y="307" class="small">Sources · time · gaps</text>
+<g class="node"><rect x="320" y="205" width="180" height="44" rx="10"/><rect x="320" y="269" width="180" height="44" rx="10"/><rect x="320" y="333" width="180" height="44" rx="10"/><rect x="518" y="205" width="166" height="44" rx="10"/><rect x="518" y="269" width="166" height="44" rx="10"/><rect x="518" y="333" width="166" height="44" rx="10"/></g>
+<g class="label"><text x="342" y="233">Fundamentals</text><text x="342" y="297">Industry</text><text x="342" y="361">Macro</text><text x="540" y="233">Technical</text><text x="540" y="297">Valuation</text><text x="540" y="361">Risk</text></g>
+<rect x="764" y="247" width="178" height="88" rx="14" fill="#344c38" stroke="#a1af76"/><text x="792" y="279" class="label">Skeptic review</text><text x="792" y="307" class="small">Challenge · dissent</text>
+<rect x="987" y="247" width="237" height="88" rx="14" fill="#c4d49b"/><text x="1014" y="279" font-size="18" fill="#183e33" font-weight="600">Research committee</text><text x="1014" y="307" font-size="14" fill="#36563e">Synthesis · verification checklist</text>
+<text x="54" y="407" class="small">LOCAL WORKSPACE  /  PROVIDER CHOICE  /  TRACEABLE RESEARCH  /  NO RETURN GUARANTEE</text>
+</svg>

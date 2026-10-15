@@ -1,0 +1,9 @@
+import assert from 'node:assert/strict';
+const base='http://127.0.0.1:8787';
+async function post(path,data){const r=await fetch(base+path,{method:'POST',headers:{'Content-Type':'application/json','X-Stock-Client':'local'},body:JSON.stringify(data)});const j=await r.json();if(!r.ok)throw Error(j.error);return j;}
+const health=await(await fetch(base+'/api/health')).json();assert.equal(health.ok,true);assert.equal(health.model.configured,true);assert.equal(JSON.stringify(health).includes('sk-cp-'),false);
+assert.equal((await fetch(base+'/.env')).status,404);
+assert.equal((await fetch(base+'/api/jobs',{method:'POST',headers:{'Content-Type':'application/json',Origin:'https://other.example'},body:'{}'})).status,403);
+const value=await post('/api/valuation',{fcff:100,netDebt:200,shares:10,growth:0,discount:.1,terminal:0,years:5});assert.ok(Math.abs(value.perShare-80)<1e-8);
+const screen=await post('/api/screen',{symbols:['600519','00700.HK','AAPL']});assert.equal(screen.length,3);assert.ok(screen.every(x=>!x.error));console.log('API health, private config protection, CSRF, DCF and three-market screening passed');
+if(process.argv.includes('--deep')){const job=await post('/api/jobs',{symbol:'600519',mode:'deep',style:'均衡研究：中长期基本面、风险适中'});console.log('Deep research started',job.id);let previous='';for(let i=0;i<120;i++){await new Promise(r=>setTimeout(r,5000));const j=await(await fetch(base+'/api/jobs/'+job.id)).json(),msg=j.status+' '+j.agents.map(x=>x.id+':'+x.status).join(',');if(msg!==previous){console.log(msg);previous=msg;}if(!['queued','running'].includes(j.status)){console.log(JSON.stringify({id:j.id,status:j.status,error:j.error,summary:j.report?.summary,stance:j.report?.stance,usage:j.usage,agents:j.agents.map(x=>({name:x.name,status:x.status,error:x.error}))}));assert.ok(['completed','partial'].includes(j.status));break;}}}
