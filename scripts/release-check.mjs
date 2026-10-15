@@ -1,6 +1,6 @@
 import {readdir,readFile,stat} from 'node:fs/promises';
 import path from 'node:path';
-export const rootFiles=['.env.example','.gitignore','.dockerignore','package.json','package-lock.json','README.md','CHANGELOG.md','Dockerfile','compose.yaml','server.mjs','启动股研助手.cmd','停止股研助手.cmd'];
+export const rootFiles=['.env.example','.gitignore','.dockerignore','package.json','package-lock.json','README.md','README.zh-CN.md','CHANGELOG.md','CHANGELOG.zh-CN.md','Dockerfile','compose.yaml','server.mjs','启动股研助手.cmd','停止股研助手.cmd'];
 export const sourceDirs=['lib','public','scripts','tests','docs','experiments','.github'];
 export async function releaseFiles(){
  const files=[...rootFiles];async function walk(dir){for(const item of await readdir(dir,{withFileTypes:true})){const p=dir+'/'+item.name;if(item.isDirectory()){if(!['__pycache__','.venv','node_modules'].includes(item.name))await walk(p);}else if(item.isFile())files.push(p);}}
