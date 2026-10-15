@@ -10,7 +10,7 @@
 ## 2. 下载与配置｜Clone and configure
 
 ```powershell
-git clone https://github.com/13536309143/Stock.git E:\Stock
+git clone https://github.com/13536309143/AstraQuant.git E:\Stock
 cd E:\Stock
 Copy-Item .env.example .env
 notepad .env

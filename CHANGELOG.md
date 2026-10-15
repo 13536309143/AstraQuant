@@ -7,7 +7,7 @@
 - Market constellation, panoramic data center, index and security views.
 - Interactive multi-period charts, technical indicators and verified A-share flow fields.
 - Sixteen provider configurations, native OpenAI/Claude/Gemini protocols and per-role routing.
-- Four research experiment groups with five measured chart panels and public aggregate results.
+- Five research experiment groups with six measured chart panels, including expanding-window learned forecasts, and public aggregate results.
 - Chinese/English README, deployment and provider documentation; Docker and CI definitions.
 
 Validation / 验证：28 个离线测试通过；MiniMax-M3 真实连接及 27 次受控案例调用成功；真实三市场行情、资金恒等式、API、来源保护和跨站请求拒绝通过。其他供应商仅协议模拟验证。Docker CLI 存在但守护进程未运行，镜像尚未实测。

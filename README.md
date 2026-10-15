@@ -104,14 +104,14 @@ See the [experiment report](docs/EXPERIMENTS.md) for methods, measured results, 
 
 ## 快速部署｜Quick start
 
-需要 **Node.js 24+**。运行服务无需 Python、前端构建或生产 npm 依赖。Python 仅用于重绘实验图表。
+需要 **Node.js 24+**。运行服务无需 Python、前端构建或生产 npm 依赖。Python 仅用于可选的实验训练与绘图。
 
-Requires **Node.js 24+**. Runtime needs no Python, frontend build step or production npm dependencies. Python is optional for rendering experiment charts.
+Requires **Node.js 24+**. Runtime needs no Python, frontend build step or production npm dependencies. Python is used for optional learned experiments and chart rendering.
 
 ```powershell
 # Windows PowerShell
-git clone https://github.com/13536309143/Stock.git
-cd Stock
+git clone https://github.com/13536309143/AstraQuant.git
+cd AstraQuant
 Copy-Item .env.example .env
 # 编辑 .env：选择供应商、填写自己的 key 和可用模型 ID
 # Edit .env: choose a provider and enter your own key/model ID
@@ -120,8 +120,8 @@ npm.cmd start
 
 ```bash
 # macOS / Linux
-git clone https://github.com/13536309143/Stock.git
-cd Stock
+git clone https://github.com/13536309143/AstraQuant.git
+cd AstraQuant
 cp .env.example .env
 # Edit .env
 npm start
@@ -199,4 +199,4 @@ data/                 Private SQLite, reports and caches (ignored)
 - 本地应用尚无多用户身份认证，请保持回环访问，远程使用见部署文档中的 SSH 隧道。 / This local app has no multi-user authentication. Keep loopback binding; use the documented SSH tunnel for remote access.
 - 源码发布不授予行情、搜索服务、第三方模型或评级数据的授权；使用须遵守各自条款。本仓库尚未指定源码开源许可证。 / Publication grants no rights to vendor quotes, search services, third-party models or ratings. Their terms apply. A source-code open-source license has not yet been selected.
 
-项目 / Project: [13536309143/Stock](https://github.com/13536309143/Stock)
+项目 / Project: [13536309143/AstraQuant](https://github.com/13536309143/AstraQuant)
