@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+data/
+logs/
+node_modules/
+*.log
+.publish/
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+Thumbs.db
+*.zip
